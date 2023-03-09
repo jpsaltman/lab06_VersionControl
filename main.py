@@ -38,7 +38,7 @@ def main():
             encoded_pwd = encode(raw_pwd)
             print("Password encoded and stored.")
         elif choice == 2:
-            decoded_pwd = decode(decoded)
+            decoded_pwd = decode(encoded_pwd)
 	    print(f"The encoded password is {encoded_pwd}, and the original password is {raw_pwd}.")
         elif choice == 3:
             exit()
