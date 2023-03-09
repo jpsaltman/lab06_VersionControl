@@ -25,7 +25,7 @@ def main():
             encoded_pwd = encode(raw_pwd)
             print("Password encoded and stored.")
         elif choice == 2:
-            encoded_pwd = input("Enter an 8-digit password to be decoded: ")
+            pass
             # decode function call
         elif choice == 3:
             exit()
