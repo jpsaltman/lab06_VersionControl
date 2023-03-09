@@ -14,7 +14,20 @@ def encode(raw_pwd):
     return encoded_pwd
 
 
-# decode function
+# Sofia Lammers
+
+def decode(decoded):
+    decoded_pwd = ''
+    input_list = list(decoded)
+    for i in range(0, len(input_list)):
+        input_list[i] = int(input_list[i])
+        if input_list[i] > 2:
+            input_list[i] -= 3
+        else:
+            input_list[i] += 7
+    for i in range(0, len(input_list)):
+        decoded_pwd += str(input_list[i])
+    return decoded_pwd
 
 def main():
     while True:
@@ -25,8 +38,8 @@ def main():
             encoded_pwd = encode(raw_pwd)
             print("Password encoded and stored.")
         elif choice == 2:
-            pass
-            # decode function call
+            decoded_pwd = decode(decoded)
+	    print(f"The encoded password is {encoded_pwd}, and the original password is {raw_pwd}.")
         elif choice == 3:
             exit()
         else:
