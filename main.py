@@ -1,3 +1,5 @@
+
+# Joshua Park
 def encode(raw_pwd):
     encoded_pwd = ''
     input_list = list(raw_pwd)
@@ -12,13 +14,16 @@ def encode(raw_pwd):
     return encoded_pwd
 
 
+# decode function
+
 def main():
     while True:
         print("1. Encode password\n2. Decode password\n3. Exit")
         choice = int(input("Enter an option: "))
         if choice == 1:
             raw_pwd = input("Enter an 8-digit password to be encoded: ")
-            print(encode(raw_pwd))
+            encoded_pwd = encode(raw_pwd)
+            print("Password encoded and stored.")
         elif choice == 2:
             encoded_pwd = input("Enter an 8-digit password to be decoded: ")
             # decode function call
